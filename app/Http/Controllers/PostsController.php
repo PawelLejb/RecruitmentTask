@@ -36,7 +36,8 @@ class PostsController extends Controller
 
     public function show($id)
     {
-        //
+
+
     }
 
     public function edit(Post $post)
@@ -71,14 +72,11 @@ class PostsController extends Controller
             $postList=Post::All()->toJson(JSON_PRETTY_PRINT);
 
         }else{
-
-            //$postList =Category::find($catId)->posts;
-            //$postList =Post::join('posts_Has_categories','posts_Has_categories.posts_id','=','posts.id')
-              //  ->where('posts_Has_categories.id','=',$catId)->get();
                 $postList= Post::with('categories')
                     ->join('posts_Has_categories','posts_Has_categories.posts_id','=','posts.id')
                     ->where('categories_id','=',$catId)
-                    ->get();
+                    ->get()
+                    ->toJson(JSON_PRETTY_PRINT);
         }
         return response($postList,200);
 

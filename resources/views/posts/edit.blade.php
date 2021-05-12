@@ -21,12 +21,7 @@
         <li class="nav-item">
             <a href="http://127.0.0.1:8000/posts" class="nav-link active" aria-current="page">Home</a>
         </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link">Get posts</a>
-        </li>
-        <li class="nav-item">
-            <a href="#" class="nav-link">Download posts</a>
-        </li>
+
         <li class="nav-item">
             <a href="http://127.0.0.1:8000/categories/create" class="nav-link">Create category</a>
         </li>
